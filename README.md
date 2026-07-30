@@ -1,4 +1,6 @@
-# Hermes: Continuous Knowledge Extraction for AI-Native Software Development
+# devmemory: Continuous Knowledge Extraction for AI-Native Software Development
+
+> Built on the **Hermes** extraction engine — a local transcript-to-knowledge pipeline.
 
 # Vision
 
@@ -6,7 +8,7 @@ Treat documentation as a continuously generated artifact of development rather t
 
 AI coding agents generate an enormous amount of valuable engineering knowledge while helping developers write software. Today, almost all of that knowledge disappears when the session ends. The code survives, but the reasoning behind it is lost.
 
-Hermes changes this by continuously extracting durable knowledge from the development process and turning it into living repository memory.
+devmemory changes this by continuously extracting durable knowledge from the development process and turning it into living repository memory.
 
 ---
 
@@ -39,11 +41,11 @@ The repository preserves the implementation—but not the engineering knowledge 
 
 # The Design
 
-Hermes runs **locally** on the developer's machine alongside Claude Code.
+devmemory runs **locally** on the developer's machine alongside Claude Code, powered by the Hermes extraction engine.
 
-Since Claude Code session transcripts (`.jsonl`) never leave the developer's machine, Hermes performs knowledge extraction where the data already exists.
+Since Claude Code session transcripts (`.jsonl`) never leave the developer's machine, devmemory performs knowledge extraction where the data already exists.
 
-As the developer works—or when a session completes—Hermes:
+As the developer works—or when a session completes—devmemory:
 
 1. Reads the latest Claude Code session transcripts.
 2. Reads the repository being actively developed.
@@ -62,7 +64,7 @@ The core design principle is simple:
 
 > **Knowledge should live as close as possible to the code it describes.**
 
-Instead of maintaining a single, monolithic AI context file for the entire repository, Hermes creates and maintains localized knowledge files throughout the project.
+Instead of maintaining a single, monolithic AI context file for the entire repository, devmemory creates and maintains localized knowledge files throughout the project.
 
 For example:
 
@@ -102,7 +104,7 @@ This gives the coding agent immediate access to the exact context it needs witho
 
 # AI-Native Repository Memory
 
-Hermes continuously maintains two complementary knowledge files.
+devmemory continuously maintains two complementary knowledge files.
 
 ## DEV.md
 
@@ -153,9 +155,9 @@ Claude Code can immediately read the local `USAGE.md` sitting next to the accoun
 
 # Continuous Knowledge Extraction Pipeline
 
-During development, Hermes continuously transforms ephemeral AI conversations into permanent repository knowledge.
+During development, devmemory continuously transforms ephemeral AI conversations into permanent repository knowledge.
 
-For every meaningful development session, Hermes:
+For every meaningful development session, devmemory:
 
 1. Reads the latest Claude Code transcripts.
 2. Reads the current code changes.
@@ -177,7 +179,7 @@ Developers shouldn't have to stop building software to document what they just b
 
 Instead:
 
-> **Developers build software. Hermes continuously extracts engineering knowledge from the development process and stores it exactly where future developers and AI agents will need it.**
+> **Developers build software. devmemory continuously extracts engineering knowledge from the development process and stores it exactly where future developers and AI agents will need it.**
 
 Documentation becomes a natural by-product of development rather than a separate task.
 
@@ -235,6 +237,6 @@ Future developers should inherit not only the code but also the thinking behind 
 
 Future AI coding agents should not start every session from scratch. They should begin with localized, high-quality context that lives directly beside the code they are modifying.
 
-Hermes transforms transient AI conversations into durable, version-controlled repository memory.
+devmemory transforms transient AI conversations into durable, version-controlled repository memory.
 
 The result is an AI-native repository where every directory contains both the implementation and the knowledge required to understand, extend, test, and operate it. As the software evolves, so does its memory.
